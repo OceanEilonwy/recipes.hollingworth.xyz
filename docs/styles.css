@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Goudy Bookletter 1911";
+    src: url("fonts/goudy_bookletter_1911.woff");
+}
+
+:root {
+    font-family: "Goudy Bookletter 1911";
+}
+
+html {
+    background-color: #efefef;
+    font-size: 1.5em;
+}
+
+body {
+    margin: 0.5em;
+}
+
+header > p {
+    margin: 0 1em;
+    font-size: larger;
+}
+
+h2 {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+h1 {
+    background-color: var(--header-color);
+    border-radius: 5px;
+    text-align: center;
+    padding: 0.25em;
+}
