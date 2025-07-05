@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    margin: 0.5em;
+    margin: 1.5em;
 }
 
 header > p {
@@ -28,7 +28,28 @@ h2 {
 
 h1 {
     background-color: var(--header-color);
-    border-radius: 5px;
     text-align: center;
     padding: 0.25em;
+}
+
+.number {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+#ingredients ul {
+    list-style-type: circle;
+}
+
+footer {
+    margin-top: 2em;
+}
+
+#byline {
+    font-size: smaller;
+    text-align: right;
+}
+
+li {
+    margin-top: 0.3em;
 }
