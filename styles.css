@@ -21,6 +21,14 @@ header > p {
     font-size: larger;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+li:has(input:checked) {
+    list-style-type: disc;
+}
+
 h2 {
     text-decoration: underline;
     font-weight: normal;
