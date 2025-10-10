@@ -74,13 +74,13 @@ li {
     gap: 0.25em;
     align-items: right;
     font-size: small;
+}
 
-    img {
-        width: 16px;
-        margin-right: 0.25em;
-    }
+.donation-address img {
+    width: 16px;
+    margin-right: 0.25em;
+}
 
-    a {
-        overflow-wrap: anywhere;
-    }
+.donation-address a {
+    overflow-wrap: anywhere;
 }
