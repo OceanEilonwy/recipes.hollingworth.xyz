@@ -54,6 +54,10 @@ h1 {
 
 footer {
     margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
 }
 
 #byline {
@@ -66,8 +70,10 @@ li {
 }
 
 .donation-address {
-    font-size: normal;
-    text-align: right;
+    display: flex;
+    gap: 0.25em;
+    align-items: right;
+    font-size: small;
 
     img {
         width: 16px;
@@ -75,9 +81,6 @@ li {
     }
 
     a {
-        font-size: smaller;
-        display: flex;
-        justify-content: right;
-        gap: 0.25em;
+        overflow-wrap: anywhere;
     }
 }
