@@ -73,7 +73,6 @@ li {
 .donation {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 0.5em;
     place-content: center;
     place-items: center;
     font-size: small;
@@ -89,14 +88,20 @@ li {
         overflow-wrap: anywhere;
     }
 
-    summary {
-        display: flex;
+    .qr-details {
+        cursor: pointer;
+        margin-right: 0.75em;
+
+        summary {
+            display: flex;
+        }
+
+        svg {
+            width: 32px;
+            height: 32px;
+        }
     }
     
-    svg {
-        width: 32px;
-        height: 32px;
-    }
     
     .qr {
         display: none;
