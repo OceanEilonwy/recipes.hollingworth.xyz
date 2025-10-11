@@ -70,49 +70,52 @@ li {
     margin-top: 0.3em;
 }
 
+/* qr = 32px, m logo = 16px
+ */
 .donation {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    place-content: center;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
     font-size: small;
+    overflow-wrap: anywhere;
 
-    .logo {
-        width: 16px;
-        margin-right: 0.25em;
-    }
-
-    .address {
+    summary {
         display: flex;
-        place-items: center;
-        overflow-wrap: anywhere;
     }
 
-    .qr-details {
+    .qr-toggle {
+        height: 32px;
+        width: 32px;
         cursor: pointer;
-        margin-right: 0.75em;
-
-        summary {
-            display: flex;
-        }
-
-        svg {
-            width: 32px;
-            height: 32px;
-        }
     }
-    
-    
-    .qr {
-        display: none;
-        grid-column: span 3;
+
+    .address-logo {
+        height: 16px;
+        width: 16px;
     }
-    
-    .qr:has(~ .qr-details[open]) {
+
+    .text-address {
         display: flex;
-        padding: 1em;
-        place-content: center;
+        flex-wrap: nowrap;
+        gap: 0.5em;
+        place-items: center;
+    }
+
+    .qr-address {
+        display: none;
         width: 80%;
+        margin: 0 auto;
+    }
+
+    details[open] ~ .address {
+        .text-address {
+            display: none;
+        }
+
+        .qr-address {
+            display: block;
+        }
     }
 }
 
