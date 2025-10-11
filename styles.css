@@ -70,18 +70,46 @@ li {
     margin-top: 0.3em;
 }
 
-.donation-address {
-    display: flex;
-    gap: 0.25em;
-    align-items: right;
+.donation {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.5em;
+    place-content: center;
+    place-items: center;
     font-size: small;
+
+    .logo {
+        width: 16px;
+        margin-right: 0.25em;
+    }
+
+    .address {
+        display: flex;
+        place-items: center;
+        overflow-wrap: anywhere;
+    }
+
+    summary {
+        display: flex;
+    }
+    
+    svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .qr {
+        display: none;
+        grid-column: span 3;
+    }
+    
+    .qr:has(~ .qr-details[open]) {
+        display: flex;
+        padding: 1em;
+        place-content: center;
+        width: 80%;
+    }
 }
 
-.donation-address img {
-    width: 16px;
-    margin-right: 0.25em;
-}
 
-.donation-address a {
-    overflow-wrap: anywhere;
-}
+
