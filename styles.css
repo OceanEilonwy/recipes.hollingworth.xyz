@@ -84,10 +84,14 @@ li {
         display: flex;
     }
 
-    .qr-toggle {
+    .toggle {
         height: 32px;
         width: 32px;
         cursor: pointer;
+    }
+
+    .link-toggle {
+        display: none;
     }
 
     .address-logo {
@@ -108,13 +112,26 @@ li {
         margin: 0 auto;
     }
 
-    details[open] ~ .address {
-        .text-address {
-            display: none;
+    details[open] {
+
+        ~ .address {
+
+            .text-address {
+                display: none;
+            }
+
+            .qr-address {
+                display: block;
+            }
+
         }
 
-        .qr-address {
+        .link-toggle {
             display: block;
+        }
+
+        .qr-toggle {
+            display: none;
         }
     }
 }
